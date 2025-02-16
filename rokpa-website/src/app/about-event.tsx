@@ -5,16 +5,16 @@ import AboutCard from "@/components/about-card";
 
 const EVENT_INFO = [
   {
-    title: "Cutting-Edge Insights!",
+    title: "Personalized Guidance!",
     description:
-      "Gain deep insights into the latest AI trends, developments, and applications that are reshaping industries worldwide. ",
-    subTitle: "Presentation",
+      "Receive one-on-one mentorship from experienced professionals who understand the challenges you face.",
+    subTitle: "Mentorship",
   },
   {
-    title: "Practical Knowledge!",
+    title: "Comprehensive Resources!",
     description:
-      "Attend workshops and hands-on sessions to acquire practical skills that you can apply immediately.",
-    subTitle: "Workshops",
+      "Access a wealth of resources including webinars, alumni networks, and educational materials to support your academic journey.",
+    subTitle: "Resources",
   },
 ];
 
@@ -22,19 +22,18 @@ export function AboutEvent() {
   return (
     <section className="container mx-auto flex flex-col items-center px-4 py-10">
       <Typography variant="h6" className="text-center mb-2" color="orange">
-        About the event
+        About the Program
       </Typography>
       <Typography variant="h3" className="text-center" color="blue-gray">
-        Why Attend?
+        Why Join?
       </Typography>
       <Typography
         variant="lead"
         className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !text-gray-500"
       >
-        Welcome to the AI Conference 2023, where the future unfolds! Whether
-        you&apos;re a seasoned AI professional, a curious newcomer, or a
-        business leader looking to harness the power of AI, this conference is
-        designed to inspire, educate, and connect.
+        Welcome to the Rokpa Mentorship Program, where your future begins! If
+        you're a high school student looking for guidance, this program is
+        designed to empower, educate, and connect you with the right mentors.
       </Typography>
       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {EVENT_INFO.map((props, idx) => (
@@ -42,9 +41,9 @@ export function AboutEvent() {
         ))}
         <div className="md:col-span-2">
           <AboutCard
-            title="Networking!"
+            title="Community Support!"
             subTitle="Community"
-            description="Connect with industry leaders, AI experts, and fellow enthusiasts to build valuable professional relationships."
+            description="Join a supportive community of mentors and mentees who are dedicated to helping each other succeed."
           />
         </div>
       </div>

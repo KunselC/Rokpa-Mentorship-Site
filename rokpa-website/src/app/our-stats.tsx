@@ -9,16 +9,16 @@ const STATS = [
     title: "Participants",
   },
   {
-    count: "50",
-    title: "Speakers",
+    count: "200+",
+    title: "Mentors",
   },
   {
-    count: "20+",
+    count: "300+",
+    title: "Mentees",
+  },
+  {
+    count: "50+",
     title: "Workshops",
-  },
-  {
-    count: "3",
-    title: "Days",
   },
 ];
 
@@ -33,15 +33,15 @@ export function OurStats() {
           className="text-5xl font-bold leading-tight lg:w-3/4"
           color="blue-gray"
         >
-          Conference Highlights
+          Program Highlights
         </Typography>
         <Typography
           variant="lead"
           className="mt-3 w-full !text-gray-500 lg:w-9/12"
         >
-          This three-day extravaganza brings together the brightest minds,
-          leading innovators, and top companies in the field of Artificial
-          Intelligence.
+          The Rokpa Mentorship Program has successfully connected thousands of
+          Tibetan youth with experienced mentors, providing invaluable guidance
+          and support.
         </Typography>
       </div>
       <div>

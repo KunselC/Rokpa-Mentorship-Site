@@ -1,37 +1,32 @@
 "use client";
 
-import {
-  Tab,
-  Tabs,
-  TabsHeader,
-} from "@material-tailwind/react";
+import { Tab, Tabs, TabsHeader } from "@material-tailwind/react";
 
 import EventContentCard from "@/components/event-content-card";
 
-
 const EVENT_CONTENT = [
   {
-    title: "AI's Role in Shaping the Future",
-    des: "Discover how AI is revolutionizing industries, creating new possibilities, and addressing global challenges. Gain a deep understanding of the pivotal role AI plays in driving innovation, sustainability, and progress in our rapidly evolving world.",
-    name: "Marcell Glock",
-    position: "Chief Executive, Spotify",
-    panel: "Panel Discussion",
+    title: "Navigating College Applications",
+    des: "Learn the ins and outs of the college application process, including tips on writing personal statements, securing recommendations, and choosing the right schools.",
+    name: "Jane Doe",
+    position: "College Admissions Counselor",
+    panel: "Workshop",
     img: "/image/avatar1.jpg",
   },
   {
-    title: "Introduction to Machine Learning",
-    des: "Explore the basic principles, algorithms, and applications of Machine Learning. Through hands-on exercises and practical examples, you'll develop a solid understanding of how Machine Learning powers AI-driven solutions.",
-    name: "Marcell Glock",
-    position: "Chief Executive, Spotify",
-    panel: "Workshop",
+    title: "Building a Strong Academic Profile",
+    des: "Discover strategies for excelling academically, managing your time effectively, and building a profile that stands out to colleges and universities.",
+    name: "John Smith",
+    position: "High School Counselor",
+    panel: "Panel Discussion",
     img: "/image/avatar2.jpg",
   },
   {
-    title: "AI in Healthcare: Revolutionizing Patient Care",
-    des: "This session is a must-attend for healthcare professionals, AI enthusiasts, and anyone interested in the intersection of technology and well-being. Join us as we discuss how AI is bringing about positive changes in healthcare.",
-    name: "Marcell Glock",
-    position: "Chief Executive, Spotify",
-    panel: "Workshop",
+    title: "Finding the Right Mentor",
+    des: "Join us for a discussion on the importance of mentorship, how to find the right mentor, and how to make the most of your mentoring relationship.",
+    name: "Emily Johnson",
+    position: "Mentorship Program Coordinator",
+    panel: "Panel Discussion",
     img: "/image/avatar3.jpg",
   },
 ];

@@ -1,40 +1,38 @@
 import { Typography, Button, IconButton } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Company", "About Us", "Team", "Products", "Blog"];
+const LINKS = ["Home", "About Us", "Programs", "Contact", "Donate"];
 
 export function Footer() {
   return (
-    <footer className="pb-5 p-10 md:pt-10">
+    <footer className="pb-5 p-10 md:pt-10 bg-gray-900 text-white">
       <div className="container flex flex-col mx-auto">
-        <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 max-w-6xl mx-auto rounded-2xl p-5 ">
-          <Typography
-            className="text-2xl md:text-3xl text-center font-bold "
-            color="white"
-          >
-            Join now and get 30% OFF!
+        <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-800 max-w-6xl mx-auto rounded-2xl p-5">
+          <Typography className="text-2xl md:text-3xl text-center font-bold">
+            Join the Rokpa Mentorship Program!
           </Typography>
-          <Typography
-            color="white"
-            className=" md:w-7/12 text-center my-3 !text-base"
-          >
-            Don&apos;t miss out on this exclusive offer that will end soon.
+          <Typography className="md:w-7/12 text-center my-3 !text-base">
+            Empowering Tibetan youth through personalized mentorship and
+            comprehensive resources.
           </Typography>
           <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
-            <Button color="white" size="md">
-              buy ticket
+            <Button color="orange" size="md">
+              Become a Mentor
+            </Button>
+            <Button color="orange" size="md">
+              Find a Mentor
             </Button>
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
             as="a"
-            href="https://www.material-tailwind.com"
+            href="https://www.rokpa.org"
             target="_blank"
             variant="h6"
-            className="text-gray-900"
+            className="text-white"
           >
-            Material Tailwind
+            Rokpa
           </Typography>
           <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
             {LINKS.map((link, index) => (
@@ -43,8 +41,7 @@ export function Footer() {
                   as="a"
                   href="#"
                   variant="small"
-                  color="white"
-                  className="font-normal !text-gray-700 hover:!text-gray-900 transition-colors"
+                  className="font-normal !text-gray-400 hover:!text-white transition-colors"
                 >
                   {link}
                 </Typography>
@@ -68,17 +65,9 @@ export function Footer() {
         </div>
         <Typography
           color="blue-gray"
-          className="text-center mt-12 font-normal !text-gray-700"
+          className="text-center mt-12 font-normal !text-gray-400"
         >
-          &copy; {CURRENT_YEAR} Made with{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Material Tailwind
-          </a>{" "}
-          by{" "}
-          <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
-          </a>
-          .
+          &copy; {CURRENT_YEAR} Rokpa Mentorship Program. All rights reserved.
         </Typography>
       </div>
     </footer>

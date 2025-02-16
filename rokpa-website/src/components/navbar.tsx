@@ -7,12 +7,13 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  RectangleStackIcon,
-  UserCircleIcon,
-  CommandLineIcon,
-  Squares2X2Icon,
+  HomeIcon,
+  UserGroupIcon,
+  AcademicCapIcon,
+  PhoneIcon,
   XMarkIcon,
   Bars3Icon,
+  HeartIcon,
 } from "@heroicons/react/24/solid";
 
 interface NavItemProps {
@@ -38,17 +39,29 @@ function NavItem({ children, href }: NavItemProps) {
 
 const NAV_MENU = [
   {
-    name: "Page",
-    icon: RectangleStackIcon,
+    name: "Home",
+    icon: HomeIcon,
+    href: "/",
   },
   {
-    name: "Account",
-    icon: UserCircleIcon,
+    name: "About Us",
+    icon: UserGroupIcon,
+    href: "/about",
   },
   {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
+    name: "Programs",
+    icon: AcademicCapIcon,
+    href: "/programs",
+  },
+  {
+    name: "Get Involved",
+    icon: HeartIcon,
+    href: "/get-involved",
+  },
+  {
+    name: "Contact",
+    icon: PhoneIcon,
+    href: "/contact",
   },
 ];
 
@@ -92,7 +105,7 @@ export function Navbar() {
           color={isScrolling ? "blue-gray" : "white"}
           className="text-lg font-bold"
         >
-          Material Tailwind
+          Rokpa Mentorship
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
@@ -110,9 +123,7 @@ export function Navbar() {
           <Button color={isScrolling ? "gray" : "white"} variant="text">
             Log in
           </Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"}>blocks</Button>
-          </a>
+          <Button color={isScrolling ? "gray" : "white"}>Sign Up</Button>
         </div>
         <IconButton
           variant="text"
@@ -139,9 +150,7 @@ export function Navbar() {
           </ul>
           <div className="mt-6 flex items-center gap-4">
             <Button variant="text">Log in</Button>
-            <a href="https://www.materila-tailwind.com/blocks" target="_blank">
-              <Button color="gray">blocks</Button>
-            </a>
+            <Button color="gray">Sign Up</Button>
           </div>
         </div>
       </Collapse>

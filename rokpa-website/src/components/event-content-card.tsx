@@ -15,6 +15,7 @@ interface EventContentCardProps {
   panel: string;
   img: string;
 }
+
 export function EventContentCard({
   title,
   des,
@@ -27,7 +28,7 @@ export function EventContentCard({
     <Card
       color="transparent"
       shadow={false}
-      className="lg:!flex-row mb-10 lg:items-end"
+      className="lg:flex-row mb-10 lg:items-end"
     >
       <CardHeader
         floated={false}
@@ -38,7 +39,7 @@ export function EventContentCard({
           width={768}
           height={768}
           src={img}
-          alt="testimonial image"
+          alt={title}
           className="h-full w-full object-cover"
         />
       </CardHeader>
@@ -53,12 +54,7 @@ export function EventContentCard({
           {des}
         </Typography>
         <div className="flex items-center gap-4">
-          <Avatar
-            variant="circular"
-            src="/logos/spotify-logo.png"
-            alt="spotify"
-            size="lg"
-          />
+          <Avatar variant="circular" src={img} alt={name} size="lg" />
           <div>
             <Typography variant="h6" color="blue-gray" className="mb-0.5">
               {name}

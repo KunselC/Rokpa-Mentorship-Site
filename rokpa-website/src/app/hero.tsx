@@ -10,21 +10,25 @@ function Hero() {
       <div className="grid min-h-screen px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
           <Typography variant="h3" color="white" className="mb-2">
-            TIBTEANS CAN. TIBETANS WILL.
+            EMPOWERING TIBETAN YOUTH
           </Typography>
           <Typography variant="h1" color="white" className="lg:max-w-3xl">
-            ROKPA — རོགས་པ་
+            ROKPA MENTORSHIP PROGRAM
           </Typography>
           <Typography
             variant="lead"
             color="white"
             className="mt-1 mb-12 w-full md:max-w-full lg:max-w-2xl"
           >
-            A global network of Tibetans working to support Tibetan youth
+            Join our global network of mentors and mentees dedicated to
+            supporting the academic and personal growth of Tibetan youth.
           </Typography>
           <div className="flex items-center gap-4">
             <Button variant="gradient" color="white">
-              Join Us
+              Become a Mentor
+            </Button>
+            <Button variant="gradient" color="white">
+              Find a Mentor
             </Button>
             <IconButton className="rounded-full bg-white p-6">
               <PlayIcon className="h-4 w-4 text-gray-900" />
