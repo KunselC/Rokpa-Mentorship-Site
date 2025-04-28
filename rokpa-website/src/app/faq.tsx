@@ -10,6 +10,7 @@ import {
 
 const FAQS = [
   {
+    // Needs to be changed yearly for each year
     title: "When can I apply?",
     desc: "Application for the one-on-one mentorship will be released in summer 2025. We are accepting on a rolling basis for the 2025 mentorship cycle.",
   },
