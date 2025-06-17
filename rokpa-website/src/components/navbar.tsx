@@ -87,7 +87,7 @@ export function Navbar() {
           as="a"
           href="/"
           color="blue-gray"
-          className="text-lg font-bold font-lora flex items-center"
+          className="text-lg font-bold font-cinzel-decorative flex items-center" // Changed from font-lora
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
@@ -95,17 +95,19 @@ export function Navbar() {
           onResizeCapture={undefined}
         >
           <Image
-            src="/image/assets/Logos/Rokpa%20Logo%20Black%20Text.png"
+            src="/image/assets/Rokpa Photos/Logos/Rokpa Logo Black Text.png" // Corrected path
             alt="Rokpa Logo"
-            width={100}
-            height={32}
+            width={100} // Keep or adjust as needed
+            height={32} // Keep or adjust as needed
             className="mr-2"
+            priority // Add priority if it's LCP
           />
         </Typography>
         <ul className="ml-10 hidden items-center gap-6 lg:flex">
           {NAV_MENU.map(({ name, href }) => (
             <NavItem key={name} href={href}>
-              {name}
+              {name}{" "}
+              {/* NavItem already uses font-sans which will be Belleza */}
             </NavItem>
           ))}
         </ul>
@@ -116,7 +118,7 @@ export function Navbar() {
           >
             <Button
               color="red"
-              className="bg-rokpa-dark-red hover:bg-rokpa-deep-red font-sans"
+              className="bg-rokpa-dark-red hover:bg-rokpa-deep-red font-sans" // Ensure font-sans for Belleza
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
@@ -150,20 +152,20 @@ export function Navbar() {
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map(({ name, href }) => (
               <NavItem key={name} href={href}>
-                {name}
+                {name}{" "}
+                {/* NavItem already uses font-sans which will be Belleza */}
               </NavItem>
             ))}
-          </ul>
-          <div className="mt-6 mb-4 flex flex-col gap-2 sm:flex-row">
+            {/* Mobile Donate Button */}
             <a
               href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID"
               target="_blank"
-              className="w-full"
+              className="mt-2"
             >
               <Button
                 color="red"
                 fullWidth
-                className="bg-rokpa-dark-red hover:bg-rokpa-deep-red font-sans"
+                className="bg-rokpa-dark-red hover:bg-rokpa-deep-red font-sans" // Ensure font-sans for Belleza
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
@@ -173,7 +175,7 @@ export function Navbar() {
                 Donate
               </Button>
             </a>
-          </div>
+          </ul>
         </div>
       </Collapse>
     </MTNavbar>

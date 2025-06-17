@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belleza&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Belleza", "Montserrat", sans-serif; /* Belleza as primary, Montserrat as fallback */
 }
 
 .font-lora {
   font-family: "Lora", serif;
 }
 
-/* You can add more specific font styles here if needed */
+.font-cinzel-decorative {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-belleza {
+  font-family: "Belleza", sans-serif; /* Changed fallback to sans-serif */
+}

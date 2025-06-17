@@ -36,7 +36,7 @@ export function Footer() {
           <div className="w-full px-4 lg:w-6/12">
             <Typography
               variant="h4"
-              className="mb-4 font-lora"
+              className="mb-4 font-cinzel-decorative" // Changed from font-lora
               color="white"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
@@ -48,7 +48,7 @@ export function Footer() {
             </Typography>
             <Typography
               variant="h5"
-              className="mb-2 font-normal text-rokpa-yellow"
+              className="mb-2 font-normal text-rokpa-yellow font-cinzel-decorative" // Added font-cinzel-decorative
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
@@ -56,17 +56,6 @@ export function Footer() {
               onResizeCapture={undefined}
             >
               Tibetans Can. Tibetans Will.
-            </Typography>
-            <Typography
-              className="mt-6 md:w-7/12 font-sans"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              Empowering Tibetan youth in diaspora by bridging the prohibitive
-              gap of resources, networks, and opportunities.
             </Typography>
             <div className="mt-6 lg:mb-0 mb-6 flex justify-center lg:justify-start">
               <a
@@ -132,7 +121,7 @@ export function Footer() {
                   <Typography
                     variant="small"
                     color="white"
-                    className="mb-2 block font-medium uppercase font-sans"
+                    className="mb-2 block font-medium uppercase font-sans" // font-sans will now be Belleza
                     placeholder={undefined}
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
@@ -159,7 +148,7 @@ export function Footer() {
                                 : undefined
                             }
                             variant="small"
-                            className="mb-2 block font-normal text-rokpa-beige hover:text-rokpa-yellow font-sans"
+                            className="mb-2 block font-normal text-rokpa-beige hover:text-rokpa-yellow font-sans" // font-sans will now be Belleza
                             placeholder={undefined}
                             onPointerEnterCapture={undefined}
                             onPointerLeaveCapture={undefined}
@@ -177,12 +166,12 @@ export function Footer() {
             )}
           </div>
         </div>
-        <hr className="my-6 border-rokpa-yellow/50" />
+        <hr className="my-6 border-rokpa-yellow" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
-          <div className="mx-auto w-fullpx-4 text-center md:w-4/12 md:text-left">
+          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
             <Typography
               variant="small"
-              className="font-normal text-rokpa-beige font-sans"
+              className="font-normal text-rokpa-beige font-sans" // font-sans will now be Belleza
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}

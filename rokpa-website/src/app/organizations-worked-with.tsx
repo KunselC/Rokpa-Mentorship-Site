@@ -22,8 +22,7 @@ export default function OrganizationsWorkedWith() {
       <div className="container mx-auto text-center">
         <Typography
           variant="h2"
-          color="blue-gray"
-          className="mb-8"
+          className="mb-12 font-cinzel-decorative text-rokpa-dark-red"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}

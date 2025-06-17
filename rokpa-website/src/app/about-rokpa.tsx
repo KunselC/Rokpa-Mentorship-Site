@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Typography, Button } from "@material-tailwind/react";
+import {
+  Typography,
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
 
 export default function AboutRokpa() {
   return (
@@ -10,105 +17,45 @@ export default function AboutRokpa() {
         <Typography
           variant="h2"
           color="blue-gray"
-          className="mb-4 font-lora"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-          onResize={undefined}
-          onResizeCapture={undefined}
+          className="mb-4 font-cinzel-decorative"
         >
           What is Rokpa?
         </Typography>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="p-6 shadow-lg rounded-lg bg-white flex flex-col">
-            <Typography
-              variant="h5"
-              color="blue-gray"
-              className="mb-2 font-lora"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              Academic Excellence
-            </Typography>
-            <Typography
-              className="text-gray-600 font-sans flex-grow"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              We support students in their academic pursuits, providing
-              resources and mentorship to excel in their studies.
-            </Typography>
-          </div>
-          <div className="p-6 shadow-lg rounded-lg bg-white flex flex-col">
-            <Typography
-              variant="h5"
-              color="blue-gray"
-              className="mb-2 font-lora"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              Professional Excellence
-            </Typography>
-            <Typography
-              className="text-gray-600 font-sans flex-grow"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              We help young professionals develop their careers through
-              networking, skill-building workshops, and mentorship.
-            </Typography>
-          </div>
-          <div className="p-6 shadow-lg rounded-lg bg-white flex flex-col">
-            <Typography
-              variant="h5"
-              color="blue-gray"
-              className="mb-2 font-lora"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              Cultural & Community Enrichment
-            </Typography>
-            <Typography
-              className="text-gray-600 font-sans flex-grow"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              We organize events and programs that celebrate Tibetan culture and
-              strengthen community bonds.
-            </Typography>
-          </div>
-        </div>
-        <Button
-          variant="filled"
-          color="red"
-          size="lg"
-          className="mt-6 bg-rokpa-deep-red hover:bg-rokpa-dark-red font-sans"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-          onResize={undefined}
-          onResizeCapture={undefined}
-        >
-          Learn More About Our Mission
-        </Button>
+        <Tabs value="what-is-rokpa" className="mt-8">
+          <TabsHeader className="flex justify-center">
+            <Tab value="what-is-rokpa">WHAT IS ROKPA</Tab>
+            <Tab value="our-mission">OUR MISSION</Tab>
+            <Tab value="our-values">OUR VALUES</Tab>
+            <Tab value="our-work">OUR WORK</Tab>
+          </TabsHeader>
+          <TabsBody>
+            <TabPanel value="what-is-rokpa">
+              <Typography className="text-gray-600 font-sans">
+                Rokpa is a mentorship organization dedicated to empowering
+                Tibetan youth through academic, professional, and cultural
+                enrichment.
+              </Typography>
+            </TabPanel>
+            <TabPanel value="our-mission">
+              <Typography className="text-gray-600 font-sans">
+                Our mission is to provide mentorship and resources that enable
+                Tibetan youth to achieve their full potential.
+              </Typography>
+            </TabPanel>
+            <TabPanel value="our-values">
+              <Typography className="text-gray-600 font-sans">
+                We value community, cultural heritage, and the pursuit of
+                excellence in all endeavors.
+              </Typography>
+            </TabPanel>
+            <TabPanel value="our-work">
+              <Typography className="text-gray-600 font-sans">
+                Our work includes mentorship programs, cultural events, and
+                professional development workshops.
+              </Typography>
+            </TabPanel>
+          </TabsBody>
+        </Tabs>
       </div>
     </section>
   );

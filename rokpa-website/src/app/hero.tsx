@@ -14,7 +14,7 @@ function Hero() {
           <Typography
             variant="h1" // Changed from h3 to h1 for the main headline
             color="white"
-            className="mb-4 lg:max-w-4xl font-lora" // Added font-lora, adjusted margin
+            className="mb-4 lg:max-w-4xl font-cinzel-decorative" // Changed from font-lora
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
@@ -26,7 +26,7 @@ function Hero() {
           <Typography
             variant="h3" // Changed from h1 to h3 for the sub-headline
             color="white"
-            className="mb-12 lg:max-w-3xl text-rokpa-yellow"
+            className="mb-12 lg:max-w-3xl text-rokpa-yellow font-cinzel-decorative" // Added font-cinzel-decorative
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
@@ -38,7 +38,7 @@ function Hero() {
           <div className="mt-8 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-center">
             <Button
               variant="filled"
-              className="bg-rokpa-dark-red hover:bg-rokpa-deep-red text-white font-sans"
+              className="bg-rokpa-yellow hover:bg-yellow-700 text-rokpa-dark-red font-sans"
               size="lg"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
@@ -49,8 +49,8 @@ function Hero() {
               Become a Scholar
             </Button>
             <Button
-              variant="outlined"
-              className="border-rokpa-yellow text-rokpa-yellow hover:bg-rokpa-yellow hover:text-rokpa-dark-red font-sans"
+              variant="filled" // Changed from outlined
+              className="bg-rokpa-yellow hover:bg-yellow-700 text-rokpa-dark-red font-sans" // Changed to match the first button
               size="lg"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
