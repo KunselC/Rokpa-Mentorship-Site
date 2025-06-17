@@ -1,74 +1,198 @@
 import { Typography, Button, IconButton } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Home", "About Us", "Programs", "Contact", "Donate"];
+
+// Corrected LINKS structure
+const LINKS = [
+  {
+    name: "Quick Links", // Column title
+    items: [
+      { name: "Home", path: "/" },
+      { name: "Our Team", path: "/our-team" },
+      { name: "Our Work", path: "/our-work" },
+      { name: "Get Involved", path: "/get-involved" },
+      { name: "Contact Us", path: "/contact" },
+    ],
+  },
+  {
+    name: "Resources", // Column title
+    items: [
+      {
+        name: "Donate",
+        path: "https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID",
+      }, // Replace with actual donate link
+      // Add other resource links if needed, e.g., FAQ, Blog
+      // { name: "FAQ", path: "/faq" },
+      // { name: "Blog", path: "/blog" },
+    ],
+  },
+];
 
 export function Footer() {
   return (
-    <footer className="pb-5 p-10 md:pt-10 bg-gray-900 text-white">
-      <div className="container flex flex-col mx-auto">
-        <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-800 max-w-6xl mx-auto rounded-2xl p-5">
-          <Typography className="text-2xl md:text-3xl text-center font-bold">
-            Join the Rokpa Mentorship Program!
-          </Typography>
-          <Typography className="md:w-7/12 text-center my-3 !text-base">
-            Empowering Tibetan youth through personalized mentorship and
-            comprehensive resources.
-          </Typography>
-          <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
-            <Button color="orange" size="md">
-              Become a Mentor
-            </Button>
-            <Button color="orange" size="md">
-              Find a Mentor
-            </Button>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row items-center !justify-between">
-          <Typography
-            as="a"
-            href="https://www.rokpa.org"
-            target="_blank"
-            variant="h6"
-            className="text-white"
-          >
-            Rokpa
-          </Typography>
-          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
-            {LINKS.map((link, index) => (
-              <li key={index}>
-                <Typography
-                  as="a"
-                  href="#"
-                  variant="small"
-                  className="font-normal !text-gray-400 hover:!text-white transition-colors"
+    <footer className="relative bg-rokpa-dark-red px-4 pt-8 pb-6 text-rokpa-beige">
+      <div className="container mx-auto">
+        <div className="flex flex-wrap pt-6 text-center lg:text-left">
+          <div className="w-full px-4 lg:w-6/12">
+            <Typography
+              variant="h4"
+              className="mb-4 font-lora"
+              color="white"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            >
+              ROKPA — རོགས་པ།
+            </Typography>
+            <Typography
+              variant="h5"
+              className="mb-2 font-normal text-rokpa-yellow"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            >
+              Tibetans Can. Tibetans Will.
+            </Typography>
+            <Typography
+              className="mt-6 md:w-7/12 font-sans"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            >
+              Empowering Tibetan youth in diaspora by bridging the prohibitive
+              gap of resources, networks, and opportunities.
+            </Typography>
+            <div className="mt-6 lg:mb-0 mb-6 flex justify-center lg:justify-start">
+              <a
+                href="https://www.facebook.com/rokpamentorship"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  color="white"
+                  className="rounded-full mr-2"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
                 >
-                  {link}
-                </Typography>
-              </li>
-            ))}
-          </ul>
-          <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-twitter text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-youtube text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-instagram text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-github text-lg" />
-            </IconButton>
+                  <i className="fa-brands fa-facebook" />
+                </IconButton>
+              </a>
+              <a
+                href="https://www.instagram.com/rokpamentorship"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  color="white"
+                  className="rounded-full mr-2"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
+                >
+                  <i className="fa-brands fa-instagram" />
+                </IconButton>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/rokpa-mentorship-program/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  color="white"
+                  className="rounded-full mr-2"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
+                >
+                  <i className="fa-brands fa-linkedin" />
+                </IconButton>
+              </a>
+              {/* Add other social media icons as needed */}
+            </div>
+          </div>
+          <div className="mx-auto mt-12 grid w-full grid-cols-2 gap-8 lg:mt-0 lg:w-5/12">
+            {LINKS.map(
+              (
+                { name, items } // 'name' is the column title, 'items' is the array of links
+              ) => (
+                <div key={name}>
+                  <Typography
+                    variant="small"
+                    color="white"
+                    className="mb-2 block font-medium uppercase font-sans"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                    onResize={undefined}
+                    onResizeCapture={undefined}
+                  >
+                    {name}
+                  </Typography>
+                  <ul className="mt-3 list-none">
+                    {items.map(
+                      (
+                        link // This 'items' is now correctly defined
+                      ) => (
+                        <li key={link.name}>
+                          <Typography
+                            as="a"
+                            href={link.path}
+                            target={
+                              link.path.startsWith("http") ? "_blank" : "_self"
+                            } // Open external links in new tab
+                            rel={
+                              link.path.startsWith("http")
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
+                            variant="small"
+                            className="mb-2 block font-normal text-rokpa-beige hover:text-rokpa-yellow font-sans"
+                            placeholder={undefined}
+                            onPointerEnterCapture={undefined}
+                            onPointerLeaveCapture={undefined}
+                            onResize={undefined}
+                            onResizeCapture={undefined}
+                          >
+                            {link.name}
+                          </Typography>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              )
+            )}
           </div>
         </div>
-        <Typography
-          color="blue-gray"
-          className="text-center mt-12 font-normal !text-gray-400"
-        >
-          &copy; {CURRENT_YEAR} Rokpa Mentorship Program. All rights reserved.
-        </Typography>
+        <hr className="my-6 border-rokpa-yellow/50" />
+        <div className="flex flex-wrap items-center justify-center md:justify-between">
+          <div className="mx-auto w-fullpx-4 text-center md:w-4/12 md:text-left">
+            <Typography
+              variant="small"
+              className="font-normal text-rokpa-beige font-sans"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            >
+              Copyright © {CURRENT_YEAR} Rokpa Mentorship. All Rights Reserved.
+            </Typography>
+          </div>
+        </div>
       </div>
     </footer>
   );
