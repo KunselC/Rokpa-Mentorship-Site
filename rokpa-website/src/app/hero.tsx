@@ -4,7 +4,7 @@ import { Button, Typography } from "@material-tailwind/react";
 
 function Hero() {
   return (
-    <div className="relative w-full h-[75vh] bg-[url('/image/assets/Rokpa%20Photos/Networking%20Conference%202025/Copy%20of%20DSC03255.JPG')] bg-cover bg-center bg-no-repeat">
+    <div className="relative w-full h-[75vh] bg-[url('/image/assets/Networking%20Conference%202025/Copy%20of%20DSC03255.JPG')] bg-cover bg-center bg-no-repeat">
       {/* Adjusted height to 75vh and added bg-center */}
       <div className="absolute inset-0 h-full w-full bg-black/70" />
       <div className="grid h-full px-8">

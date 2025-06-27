@@ -54,8 +54,12 @@ const NAV_MENU = [
     href: "/get-involved",
   },
   {
-    name: "Contact Us",
+    name: "Contact",
     href: "/contact",
+  },
+  {
+    name: "Donate",
+    href: "/donate",
   },
 ];
 
@@ -106,29 +110,11 @@ export function Navbar() {
         <ul className="ml-10 hidden items-center gap-6 lg:flex">
           {NAV_MENU.map(({ name, href }) => (
             <NavItem key={name} href={href}>
-              {name}{" "}
-              {/* NavItem already uses font-sans which will be Belleza */}
+              {name}
             </NavItem>
           ))}
         </ul>
-        <div className="hidden items-center gap-2 lg:flex">
-          <a
-            href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID"
-            target="_blank"
-          >
-            <Button
-              color="red"
-              className="bg-rokpa-dark-red hover:bg-rokpa-deep-red font-sans" // Ensure font-sans for Belleza
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-              onResize={undefined}
-              onResizeCapture={undefined}
-            >
-              Donate
-            </Button>
-          </a>
-        </div>
+        <div className="hidden items-center gap-2 lg:flex"></div>
         <IconButton
           variant="text"
           color="gray"
@@ -152,29 +138,9 @@ export function Navbar() {
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map(({ name, href }) => (
               <NavItem key={name} href={href}>
-                {name}{" "}
-                {/* NavItem already uses font-sans which will be Belleza */}
+                {name}
               </NavItem>
             ))}
-            {/* Mobile Donate Button */}
-            <a
-              href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID"
-              target="_blank"
-              className="mt-2"
-            >
-              <Button
-                color="red"
-                fullWidth
-                className="bg-rokpa-dark-red hover:bg-rokpa-deep-red font-sans" // Ensure font-sans for Belleza
-                placeholder={undefined}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
-                onResize={undefined}
-                onResizeCapture={undefined}
-              >
-                Donate
-              </Button>
-            </a>
           </ul>
         </div>
       </Collapse>

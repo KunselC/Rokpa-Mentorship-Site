@@ -1,7 +1,7 @@
 // "use client";
 
 // components
-import { Navbar, Footer } from "@/components";
+import { Footer } from "@/components";
 
 // sections
 import Hero from "./hero";
@@ -12,7 +12,7 @@ import OrganizationsWorkedWith from "./organizations-worked-with";
 export default function Page() {
   return (
     <>
-      <Navbar />
+      {/* Navbar is included globally via Layout */}
       <Hero />
       <AboutRokpa />
       <RokpaScholarsHighlight />
