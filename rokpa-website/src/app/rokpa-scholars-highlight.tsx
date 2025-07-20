@@ -4,27 +4,21 @@ import React from "react";
 import { Typography, Button, Card, CardBody } from "@material-tailwind/react";
 import Image from "next/image";
 
-const SCHOLARS = [
+const FEATURES = [
   {
-    name: "Scholar 1",
-    image:
-      "/image/assets/Rokpa Photos/Networking Conference 2025/Copy of a.JPG",
-    story:
-      "A brief highlight of a scholar's journey and achievements through the Rokpa Scholars program.",
+    image: "/image/assets/Networking Conference 2025/Copy of DSC03255.JPG",
+    title: "College & Career Mentorship",
+    desc: "One-on-one guidance from accomplished Tibetan college students and professionals to help you navigate high school, college, and beyond.",
   },
   {
-    name: "Scholar 2",
-    image:
-      "/image/assets/Rokpa Photos/Networking Conference 2025/Copy of DSC03237.JPG",
-    story:
-      "Discover how our dedicated mentors make a difference in the lives of young Tibetan students.",
+    image: "/image/assets/More Images/IMG_2880.jpg",
+    title: "Supportive Community",
+    desc: "Join a vibrant network of Tibetan youth and mentors, fostering lifelong friendships and a sense of belonging.",
   },
   {
-    name: "Scholar 3",
-    image:
-      "/image/assets/Rokpa Photos/Boston College Fair 2025/Copy of IMG_4124.png",
-    story:
-      "Learn about the vibrant community and network that Rokpa scholars become a part of.",
+    image: "/image/assets/More Images/IMG_2818.jpeg",
+    title: "Cultural Empowerment",
+    desc: "Workshops and events that celebrate Tibetan heritage and identity, helping you stay connected to your roots.",
   },
 ];
 
@@ -59,26 +53,27 @@ export default function RokpaScholarsHighlight() {
         </Typography>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {SCHOLARS.map((scholar, index) => (
+          {FEATURES.map((feature, index) => (
             <Card
               key={index}
-              className="shadow-lg bg-white"
+              className="shadow-lg bg-white flex flex-col items-center p-0"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
               onResize={undefined}
               onResizeCapture={undefined}
             >
-              <div className="relative w-full h-64">
+              <div className="relative w-full h-48 md:h-56">
                 <Image
-                  src={scholar.image}
-                  alt={scholar.name}
+                  src={feature.image}
+                  alt={feature.title}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-t-lg"
                 />
               </div>
               <CardBody
+                className="flex flex-col items-center p-6"
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
@@ -94,21 +89,18 @@ export default function RokpaScholarsHighlight() {
                   onResize={undefined}
                   onResizeCapture={undefined}
                 >
-                  {scholar.name}
+                  {feature.title}
                 </Typography>
                 <Typography
-                  className="font-sans text-gray-700 mb-4" // font-sans will be Belleza
+                  className="font-sans text-gray-700 mb-4"
                   placeholder={undefined}
                   onPointerEnterCapture={undefined}
                   onPointerLeaveCapture={undefined}
                   onResize={undefined}
                   onResizeCapture={undefined}
                 >
-                  {scholar.story}
+                  {feature.desc}
                 </Typography>
-                {/* <Button variant="text" color="red" className="text-rokpa-dark-red">
-                  Read More
-                </Button> */}
               </CardBody>
             </Card>
           ))}

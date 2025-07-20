@@ -8,6 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -91,7 +92,7 @@ export function Navbar() {
           as="a"
           href="/"
           color="blue-gray"
-          className="text-lg font-bold font-cinzel-decorative flex items-center" // Changed from font-lora
+          className="text-lg font-bold font-cinzel-decorative flex items-center"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
@@ -99,48 +100,102 @@ export function Navbar() {
           onResizeCapture={undefined}
         >
           <Image
-            src="/image/assets/Rokpa Photos/Logos/Rokpa Logo Black Text.png" // Corrected path
+            src="/image/assets/Rokpa Photos/Logos/Rokpa Logo Black Text.png"
             alt="Rokpa Logo"
-            width={100} // Keep or adjust as needed
-            height={32} // Keep or adjust as needed
+            width={100}
+            height={32}
             className="mr-2"
-            priority // Add priority if it's LCP
+            priority
           />
         </Typography>
-        <ul className="ml-10 hidden items-center gap-6 lg:flex">
-          {NAV_MENU.map(({ name, href }) => (
-            <NavItem key={name} href={href}>
-              {name}
-            </NavItem>
-          ))}
-        </ul>
-        <div className="hidden items-center gap-2 lg:flex"></div>
-        <IconButton
-          variant="text"
-          color="gray"
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-          onResize={undefined}
-          onResizeCapture={undefined}
-        >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-          ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-          )}
-        </IconButton>
+        <div className="flex items-center gap-4 flex-1 justify-end">
+          <ul className="hidden items-center gap-6 md:flex">
+            {NAV_MENU.filter(({ name }) => name !== "Donate").map(
+              ({ name, href }) => (
+                <NavItem key={name} href={href}>
+                  {name}
+                </NavItem>
+              )
+            )}
+          </ul>
+          {/* Always-visible Donate button (all screens >=md) */}
+          <Link href="/donate" className="ml-4">
+            <Button
+              variant="filled"
+              className="bg-rokpa-yellow text-rokpa-dark-red font-bold px-6 py-2 rounded-lg shadow-md hover:bg-yellow-400 hover:text-rokpa-dark-red transition hidden md:inline-block"
+              size="md"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            >
+              Donate
+            </Button>
+          </Link>
+          {/* Mobile: Donate button to the right of menu button */}
+          <div className="flex items-center gap-2 md:hidden ml-auto">
+            <IconButton
+              variant="text"
+              color="gray"
+              onClick={handleOpen}
+              className="inline-block"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            >
+              {open ? (
+                <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+              ) : (
+                <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+              )}
+            </IconButton>
+            <Link href="/donate">
+              <Button
+                variant="filled"
+                className="bg-rokpa-yellow text-rokpa-dark-red font-bold px-4 py-2 rounded-lg shadow-md hover:bg-yellow-400 hover:text-rokpa-dark-red transition sm:hidden"
+                size="md"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+                onResize={undefined}
+                onResizeCapture={undefined}
+              >
+                Donate
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
       <Collapse open={open}>
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
-            {NAV_MENU.map(({ name, href }) => (
-              <NavItem key={name} href={href}>
-                {name}
-              </NavItem>
-            ))}
+            {NAV_MENU.filter(({ name }) => name !== "Donate").map(
+              ({ name, href }) => (
+                <NavItem key={name} href={href}>
+                  {name}
+                </NavItem>
+              )
+            )}
+            {/* Donate button always visible at bottom of mobile menu */}
+            <li>
+              <Link href="/donate">
+                <Button
+                  variant="filled"
+                  className="bg-rokpa-yellow text-rokpa-dark-red font-bold w-full mt-2"
+                  size="md"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
+                >
+                  Donate
+                </Button>
+              </Link>
+            </li>
           </ul>
         </div>
       </Collapse>
