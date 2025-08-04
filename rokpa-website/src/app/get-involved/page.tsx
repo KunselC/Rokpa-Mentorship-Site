@@ -1,7 +1,17 @@
 "use client";
 
 import React from "react";
-import { Typography, Card, CardBody, Button } from "@material-tailwind/react";
+import {
+  Typography,
+  Card,
+  CardBody,
+  Button,
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -73,6 +83,35 @@ const involvementOpportunities = [
     imageUrl: "/image/assets/Ngatso%20Fest%202024/P1060219.JPG",
     buttonText: "Feedback Form",
     buttonLink: "/contact",
+  },
+];
+
+const tabbedOpportunities = [
+  {
+    label: "Direct Involvement",
+    value: "direct-involvement",
+    opportunities: involvementOpportunities.filter((o) =>
+      [
+        "Become a Mentor",
+        "Become a Board Member",
+        "Intern With Us",
+        "Volunteer for Rokpa",
+      ].includes(o.title)
+    ),
+  },
+  {
+    label: "Content & Community",
+    value: "content-community",
+    opportunities: involvementOpportunities.filter((o) =>
+      ["Write for Our Blogs", "Give Us Feedback"].includes(o.title)
+    ),
+  },
+  {
+    label: "Support & Partnership",
+    value: "support-partnership",
+    opportunities: involvementOpportunities.filter((o) =>
+      ["Partner With Us", "Support Our Mission"].includes(o.title)
+    ),
   },
 ];
 
@@ -153,6 +192,7 @@ const InvolvementCard = ({
 );
 
 export default function GetInvolvedPage() {
+  const [activeTab, setActiveTab] = React.useState("direct-involvement");
   return (
     <main className="min-h-screen bg-rokpa-beige text-gray-800">
       <div className="container mx-auto px-6 py-12">
@@ -168,11 +208,54 @@ export default function GetInvolvedPage() {
           Get Involved
         </Typography>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {involvementOpportunities.map((opportunity, index) => (
-            <InvolvementCard key={index} {...opportunity} />
-          ))}
-        </div>
+        <Tabs value={activeTab} onChange={setActiveTab}>
+          <TabsHeader
+            className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
+            indicatorProps={{
+              className:
+                "bg-transparent border-b-2 border-rokpa-dark-red shadow-none rounded-none",
+            }}
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            onResize={undefined}
+            onResizeCapture={undefined}
+          >
+            {tabbedOpportunities.map(({ label, value }) => (
+              <Tab
+                key={value}
+                value={value}
+                className={
+                  activeTab === value ? "text-rokpa-dark-red" : "text-gray-600"
+                }
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+                onResize={undefined}
+                onResizeCapture={undefined}
+              >
+                {label}
+              </Tab>
+            ))}
+          </TabsHeader>
+          <TabsBody
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            onResize={undefined}
+            onResizeCapture={undefined}
+          >
+            {tabbedOpportunities.map(({ value, opportunities }) => (
+              <TabPanel key={value} value={value} className="pt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  {opportunities.map((opportunity, index) => (
+                    <InvolvementCard key={index} {...opportunity} />
+                  ))}
+                </div>
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
       </div>
     </main>
   );

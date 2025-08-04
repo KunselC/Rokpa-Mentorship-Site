@@ -39,7 +39,7 @@ export default function RokpaScholarsHighlight() {
         </Typography>
         <Typography
           variant="lead"
-          className="text-gray-700 mx-auto max-w-3xl font-sans"
+          className="text-gray-700 mx-auto max-w-3xl font-sans mb-8"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}

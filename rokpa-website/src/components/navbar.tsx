@@ -100,7 +100,7 @@ export function Navbar() {
           onResizeCapture={undefined}
         >
           <Image
-            src="/image/assets/Rokpa Photos/Logos/Rokpa Logo Black Text.png"
+            src="/image/assets/Logos/Rokpa%20Logo%20Black%20Text.png"
             alt="Rokpa Logo"
             width={100}
             height={32}
